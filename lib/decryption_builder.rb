@@ -36,8 +36,7 @@ class DecryptionBuilder
 		decrypted_string = ''
 		text_array = @data.split(' ')
 
-		text_array.each_with_index do |text, k|
-			#'22233555'
+		text_array.each_with_index do |text, k|			
 			j = 0
 			(0..text.length-1).each do |i|
 				binding.pry
@@ -46,8 +45,7 @@ class DecryptionBuilder
 				new_text = text[i] * count
 				binding.pry
 				decrypted_string += COMPARE_HASH["#{new_text}"]
-				j = i+count
-				#binding.pry				
+				j = i+count							
 				end
 			end
 				
@@ -66,8 +64,7 @@ class DecryptionBuilder
 	    test.each do |l|
 
 	       if l == letter
-	       	#binding.pry
-	          	count +=1	 
+	       	   	count +=1	 
 	        else
 	          	break      
 	       end
